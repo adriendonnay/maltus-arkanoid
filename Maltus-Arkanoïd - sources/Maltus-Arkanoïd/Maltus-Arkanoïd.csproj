@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74DA790D-C034-4FE1-9A34-DBB18E018B80}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Maltus_Arkanoïd</RootNamespace>
+    <AssemblyName>Maltus-Arkanoïd</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icone.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Balle.cs" />
+    <Compile Include="Brique.cs" />
+    <Compile Include="ClientOuServeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientOuServeur.Designer.cs">
+      <DependentUpon>ClientOuServeur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Communication.cs" />
+    <Compile Include="Configuration_Reseau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration_Reseau.Designer.cs">
+      <DependentUpon>Configuration_Reseau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu_Client.Designer.cs">
+      <DependentUpon>Jeu_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu_Serveur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu_Serveur.Designer.cs">
+      <DependentUpon>Jeu_Serveur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametres.cs" />
+    <Compile Include="SelectionneurNiveau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectionneurNiveau.Designer.cs">
+      <DependentUpon>SelectionneurNiveau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="joueur.cs" />
+    <Compile Include="menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profil.Designer.cs">
+      <DependentUpon>Profil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu.Designer.cs">
+      <DependentUpon>Jeu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vaisseau.cs" />
+    <EmbeddedResource Include="ClientOuServeur.resx">
+      <DependentUpon>ClientOuServeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration_Reseau.resx">
+      <DependentUpon>Configuration_Reseau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu_Client.resx">
+      <DependentUpon>Jeu_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu_Serveur.resx">
+      <DependentUpon>Jeu_Serveur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil.resx">
+      <DependentUpon>Profil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu.resx">
+      <DependentUpon>Jeu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SelectionneurNiveau.resx">
+      <DependentUpon>SelectionneurNiveau.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icone.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
